@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from datetime import datetime
 
 application = Flask(__name__)
-#app.config.from_pyfile('news.cfg')
+application.config.from_pyfile('news.cfg')
 
 #mongo = MongoClient('localhost:27017')
 mongo = MongoClient(app.config['MONGODB_HOST'], app.config['MONGODB_PORT'])
