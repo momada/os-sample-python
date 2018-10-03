@@ -9,7 +9,7 @@ application.config.from_pyfile('news.cfg')
 mongo = MongoClient(application.config['MONGODB_HOST'], application.config['MONGODB_PORT'])
 
 db = mongo['news']
-db.authenticate('admin', '6gdpaxrdzM5N')
+db.authenticate('admin', 'steven')
 
 
 @application.route('/')
