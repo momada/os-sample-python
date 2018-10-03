@@ -6,7 +6,7 @@ application = Flask(__name__)
 application.config.from_pyfile('news.cfg')
 
 #mongo = MongoClient('localhost:27017')
-mongo = MongoClient(app.config['MONGODB_HOST'], app.config['MONGODB_PORT'])
+mongo = MongoClient(application.config['MONGODB_HOST'], application.config['MONGODB_PORT'])
 
 db = mongo['news']
 db.authenticate('admin', '6gdpaxrdzM5N')
